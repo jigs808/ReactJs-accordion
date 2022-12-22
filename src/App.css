@@ -19,8 +19,12 @@ h1 {
   text-align: center;
   margin: 2rem 0 4rem 0;
 }
+#profile {
+  display: inline;
+}
 
 .accordion {
+  position: relative;
   max-width: 600px;
   margin: 2rem auto;
 }
@@ -74,6 +78,11 @@ img {
 
 i {
   float: right;
+}
+
+input:disabled {
+  border-style: none;
+  width: 30vw;
 }
 
 @media screen and (max-width: 700px) {
