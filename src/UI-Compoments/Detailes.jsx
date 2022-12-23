@@ -4,10 +4,7 @@ function Detailes({ dob, gender, description, country }) {
   let age = new Date().getFullYear() - Number(dob.slice(0, 4));
   return (
     <>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      />
+      
 
       <div className="accordion-content">
         <div style={{ display: "flex" }}>

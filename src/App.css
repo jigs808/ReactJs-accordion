@@ -72,24 +72,45 @@ h1 {
   position: relative;
   display: inline-flex;
   align-content: flex-end;
+  align-items: center;
 }
 #profile label {
   margin-left: 1em;
-  margin-top: 0.5em;
 }
 
 img {
   border-radius: 50%;
-  max-height: max-content;
+  height: 50px;
 }
 
-i {
+i:not(.fa-search) {
   float: right;
+  justify-content: space-between;
 }
 
 input:disabled {
   border-style: none;
-  width: 30vw;
+  background-color: whitesmoke;
+}
+
+.bar {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #dcdcdc;
+  margin-top: 0.4em;
+}
+.fa-search {
+  padding: 0.4em;
+  color: lightgray;
+}
+.searchbar {
+  border: none;
+  font-size: 16px;
+  outline: none;
+  width: 80%;
 }
 
 @media screen and (max-width: 700px) {

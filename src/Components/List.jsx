@@ -1,25 +1,28 @@
-import personData from '../assets/celebrities.json'; // ES6 babel import syntax for local json/any-data
-import Accordion from '../UI-Compoments/Accordion';
+import personData from "../assets/celebrities.json"; // ES6 babel import syntax for local json/any-data
+import Accordion from "../UI-Compoments/Accordion";
 
 function List() {
-    console.log(personData)
-    return (
-        <div>
-        <h1>Most Famous Celebrities</h1>
-       
-        <div className="accordion">
+  console.log(personData);
+  return (
+    <div>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+      <h1>Most Famous Celebrities</h1>
+
+      <div className="accordion">
         <section>List view</section>
-        <input type='search'></input>
-          {personData.map((data,i) => (
-            <Accordion key={i} content={data} />
-          ))}
+        <div className="bar">
+          <i class="fa fa-search"></i>
+          <input disabled className="searchbar" type="text" placeholder="Search User"></input>
         </div>
+        {personData.map((data, i) => (
+          <Accordion key={i} content={data} />
+        ))}
       </div>
-      
-      
-    
-  
+    </div>
   );
-  }
-  
-  export default List;
+}
+
+export default List;
