@@ -7,24 +7,35 @@ function Detailes({ dob, gender, description, country }) {
       
 
       <div className="accordion-content">
-        <div style={{ display: "flex" }}>
+        <div className='profile_attr'>
           <div >
-            age: <br />
-            <input value={age} disabled={true}></input>
+            Age <br />
+              <input value={age} disabled={true}></input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label style={{position:"relative",bottom:"1.6em"}}>
+              Years
+              </label>
           </div>
           <div>
-            gender: <br />
-            {gender}
+            Gender <br />
+            <select> 
+            <option selected vlaue={gender}> {gender}</option>
+            <option > male </option>
+            <option > female </option>
+            <option > Rather not say </option>
+            
+            </select>
           </div>
           <div>
-            country: <br />
+            Country <br />
             <input value={country} disabled={true}></input>
           </div>
         </div>
-
+        Description
         <p>{description}</p>
-        <i className="fa fa-trash-o fa-3fx" aria-hidden="true"></i>
-        <i className="fa fa-pencil fa-3fx" aria-hidden="true"></i>
+        <div id='actions'>
+          <i className="fa fa-trash-o fa-3fx" aria-hidden="true"></i>
+          <i className="fa fa-pencil fa-3fx" aria-hidden="true"></i>
+        </div>
       </div>
     </>
   );

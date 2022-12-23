@@ -1,8 +1,11 @@
 import personData from "../assets/celebrities.json"; // ES6 babel import syntax for local json/any-data
 import Accordion from "../UI-Compoments/Accordion";
+import { useState } from "react";
 
 function List() {
   console.log(personData);
+  const [isActiveId,setIsActiveID] = useState(false);
+  
   return (
     <div>
       <link
@@ -18,7 +21,12 @@ function List() {
           <input disabled className="searchbar" type="text" placeholder="Search User"></input>
         </div>
         {personData.map((data, i) => (
-          <Accordion key={i} content={data} />
+          <Accordion 
+          key={i} 
+          content={data} 
+          active={isActiveId === i} 
+          onToogle = {(e)=> setIsActiveID((isActiveId) => (isActiveId === i)? "srink" : i)}
+          />
         ))}
       </div>
     </div>

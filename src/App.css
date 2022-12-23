@@ -27,6 +27,7 @@ h1 {
 }
 
 .accordion-title {
+  position:relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -41,13 +42,34 @@ h1 {
   max-height: 4em;
 }
 
-.accordion-title:focus {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+.bar:hover {
+  border: 1px solid gray;
 }
 
 .accordion-title:hover {
   background-color: #deb7b7;
+}
+
+#chevron{
+ 
+  margin-top:.6em;
+}
+
+#actions{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-evenly;
+  font-size:25px;
+  position:relative;
+  top:9px;
+}
+.fa-trash-o{
+  color: #D00000 ;
+  cursor:pointer;
+}
+.fa-pencil{
+  cursor:pointer;
+  color: 	#0099FF;
 }
 
 .accordion-title,
@@ -61,11 +83,6 @@ h1 {
   background-color: #ffffff;
   border-bottom-right-radius: 1em;
   border-bottom-left-radius: 1em;
-}
-
-.edit {
-  border: 1px solid gray;
-  border-radius: 0.5em;
 }
 
 #profile {
@@ -85,12 +102,19 @@ img {
 
 i:not(.fa-search) {
   float: right;
-  justify-content: space-between;
+}
+.profile_attr{
+  display: inline-flex;
 }
 
-input:disabled {
+.profile_attr * {
   border-style: none;
-  background-color: whitesmoke;
+  background-color:  transparent ;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  max-width: 30vw;
+  padding:5px;
+  font-size:1em;
 }
 
 .bar {
@@ -111,6 +135,11 @@ input:disabled {
   font-size: 16px;
   outline: none;
   width: 80%;
+}
+.edit * {
+  border: 1px solid gray;
+  border-radius: 0.5em;
+  -webkit-appearance: default;
 }
 
 @media screen and (max-width: 700px) {
