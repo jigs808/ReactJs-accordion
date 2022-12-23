@@ -9,9 +9,9 @@ const Accordion = ({
   return (
     <div className="accordion-item">
       <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
-        <div id='profile'>
+        <div id="profile">
           <img src={picture} alt="" />
-          {`${first} ${last}`}
+          <label>{`${first} ${last}`}</label>
         </div>
 
         <div>
