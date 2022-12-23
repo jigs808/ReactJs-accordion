@@ -21,11 +21,13 @@ h1 {
 }
 
 .accordion {
+  position: relative;
   max-width: 600px;
   margin: 2rem auto;
 }
 
 .accordion-title {
+  position:relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -40,13 +42,34 @@ h1 {
   max-height: 4em;
 }
 
-.accordion-title:focus {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+.bar:hover {
+  border: 1px solid gray;
 }
 
 .accordion-title:hover {
   background-color: #deb7b7;
+}
+
+#chevron{
+ 
+  margin-top:.6em;
+}
+
+#actions{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-evenly;
+  font-size:25px;
+  position:relative;
+  top:9px;
+}
+.fa-trash-o{
+  color: #D00000 ;
+  cursor:pointer;
+}
+.fa-pencil{
+  cursor:pointer;
+  color: 	#0099FF;
 }
 
 .accordion-title,
@@ -62,18 +85,61 @@ h1 {
   border-bottom-left-radius: 1em;
 }
 
-.edit {
-  border: 1px solid gray;
-  border-radius: 0.5em;
+#profile {
+  position: relative;
+  display: inline-flex;
+  align-content: flex-end;
+  align-items: center;
+}
+#profile label {
+  margin-left: 1em;
 }
 
 img {
-  shape-outside: circle();
-  margin-right: 2px;
+  border-radius: 50%;
+  height: 50px;
 }
 
-i {
+i:not(.fa-search) {
   float: right;
+}
+.profile_attr{
+  display: inline-flex;
+}
+
+.profile_attr * {
+  border-style: none;
+  background-color:  transparent ;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  max-width: 30vw;
+  padding:5px;
+  font-size:1em;
+}
+
+.bar {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #dcdcdc;
+  margin-top: 0.4em;
+}
+.fa-search {
+  padding: 0.4em;
+  color: lightgray;
+}
+.searchbar {
+  border: none;
+  font-size: 16px;
+  outline: none;
+  width: 80%;
+}
+.edit * {
+  border: 1px solid gray;
+  border-radius: 0.5em;
+  -webkit-appearance: default;
 }
 
 @media screen and (max-width: 700px) {
