@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Detailes from "./Detailes";
 
 const Accordion = ({
@@ -7,10 +7,6 @@ const Accordion = ({
 ) => {
   const [isActive, setIsActive] = useState(false);
   
-  // const toogleItem = () => {
-  //   setIsActive(active)
-  //   onToogle();
-  // }
   
 
   return (

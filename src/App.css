@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
 }
 
 body {
@@ -26,63 +28,60 @@ h1 {
   margin: 2rem auto;
 }
 
+.accordion-item {
+  min-height: 4em;
+  border-radius: 1em;
+  background-color: #ffffff;
+  border: 1px solid gray;
+  margin-top: 0.4em;
+  transition: all 0.3;
+}
+
 .accordion-title {
-  position:relative;
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   cursor: pointer;
-  background-color: #ffffff;
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
-  border-bottom-left-radius: 1em;
-  border-bottom-right-radius: 1em;
-  margin-top: 0.4em;
-  transition: all 0.3;
+  padding: 1rem;
+
   max-height: 4em;
+}
+.accordion-content {
+  padding: 1rem;
 }
 
 .bar:hover {
   border: 1px solid gray;
 }
 
-.accordion-title:hover {
+.accordion-item:hover {
   background-color: #deb7b7;
 }
 
-#chevron{
- 
-  margin-top:.6em;
+#chevron {
+  margin-top: 0.6em;
 }
 
-#actions{
-  display:flex;
-  flex-direction:row;
-  justify-content: space-evenly;
-  font-size:25px;
-  position:relative;
-  top:9px;
-}
-.fa-trash-o{
-  color: #D00000 ;
-  cursor:pointer;
-}
-.fa-pencil{
-  cursor:pointer;
-  color: 	#0099FF;
-}
+#actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 
-.accordion-title,
-.accordion-content {
-  padding: 1rem;
-  border: 1px solid gray;
-  box-shadow: inset;
+  font-size: 25px;
+  position: relative;
+  top: 9px;
 }
-
-.accordion-content {
-  background-color: #ffffff;
-  border-bottom-right-radius: 1em;
-  border-bottom-left-radius: 1em;
+#actions > i {
+  margin-left: 1rem;
+}
+.fa-trash-o {
+  color: #d00000;
+  cursor: pointer;
+}
+.fa-pencil {
+  cursor: pointer;
+  color: #0099ff;
 }
 
 #profile {
@@ -100,21 +99,21 @@ img {
   height: 50px;
 }
 
-i:not(.fa-search) {
-  float: right;
-}
-.profile_attr{
-  display: inline-flex;
+.profile_attr {
+  display: grid;
+  grid-template-columns: 30% 32% 33%;
 }
 
-.profile_attr * {
+.profile_attr > div {
+  display: grid;
+}
+
+input,
+select {
   border-style: none;
-  background-color:  transparent ;
+  background-color: transparent;
   -webkit-appearance: none;
   -moz-appearance: none;
-  max-width: 30vw;
-  padding:5px;
-  font-size:1em;
 }
 
 .bar {
@@ -142,12 +141,14 @@ i:not(.fa-search) {
   -webkit-appearance: default;
 }
 
-@media screen and (max-width: 700px) {
-  body {
-    font-size: 18px;
-  }
-
+@media screen and (max-width: 600px) {
   .accordion {
     width: 90%;
+  }
+  *:not(body, h1) {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 20px;
   }
 }
