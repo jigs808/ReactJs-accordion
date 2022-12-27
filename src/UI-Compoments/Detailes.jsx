@@ -14,14 +14,12 @@ function Detailes({ dob, gender, description, country }) {
     <>
       <div className="accordion-content">
         <div className="profile_attr">
-          <div style={{ marginRight: "-0.5rem" }}>
+          <div>
             <label>Age</label>
-            <div>
-              <input value={age} disabled={true} /> <text>Years</text>
+            <div style={{ display: "inline" }}>
+              <input value={age} disabled={true} style={{ width: "30px" }} />
+              <label>Years</label>
             </div>
-            {/* <label style={{position:"relative",bottom:"1.2em"}}>
-              Years
-              </label> */}
           </div>
 
           <div>
@@ -41,7 +39,7 @@ function Detailes({ dob, gender, description, country }) {
             <input value={country} disabled={true}></input>
           </div>
         </div>
-
+        <br />
         <label> Description</label>
         <p>{description}</p>
         {/* <textarea>{description}</textarea> */}
